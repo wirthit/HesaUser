@@ -22,6 +22,8 @@ namespace HesaUser.Data
 
     public class UserDbContext : DbContext
     {
+        //private DbContextOptionsBuilder options;
+
         public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) // for migration
         {
         }

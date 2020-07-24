@@ -17,7 +17,6 @@ using HesaUser.Data;
 
 namespace HesaUser
 {
-
     public class Startup
     {
         public Startup(IConfiguration configuration)

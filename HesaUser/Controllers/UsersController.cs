@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HesaUser.Data;
+using System.Security.Cryptography.X509Certificates;
 
 namespace HesaUser.Controllers
 {
@@ -20,6 +21,13 @@ namespace HesaUser.Controllers
             _context = context;
         }
 
+        // GET: api/Users/Filter
+        [HttpGet("{filter}")]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers(string filter)
+        {
+            return await _context.Users.Where(x => x.Surname.Contains(filter)).ToListAsync();
+        }
+
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
@@ -28,7 +36,7 @@ namespace HesaUser.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);

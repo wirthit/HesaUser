@@ -33,3 +33,9 @@
     </tbody>
 </table>
 
+@using (Html.BeginForm("Users", "Users", FormMethod.Post))
+{
+    @Html.TextBoxFor(x => Model.filter);
+    <button type="submit">Search</button>
+}
+

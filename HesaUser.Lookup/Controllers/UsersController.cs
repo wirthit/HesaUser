@@ -25,9 +25,16 @@ namespace HesaUser.Lookup.Controllers
         [HttpGet("{filter}")]
         public IActionResult Users(string filter)
         {
-            string URI = _HesaUserAPISettings.URI + "/Users/" + filter;
-
             Users users = new Users();
+
+            //if (string.IsNullOrEmpty(filter))
+            //{
+            //    users.UserList = new List<User>();
+
+            //    return View(users);
+            //}
+
+            string URI = _HesaUserAPISettings.URI + "/Users/" + filter;
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI);
 

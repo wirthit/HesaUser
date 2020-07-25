@@ -9,6 +9,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Text.RegularExpressions;
 
 namespace HesaUser.Lookup.Controllers
 {
@@ -33,9 +34,11 @@ namespace HesaUser.Lookup.Controllers
                 return View(users);
             }
 
-            if (filter=="robinson")
+            Regex r = new Regex("^[a-z ,.'-]+$", RegexOptions.IgnoreCase);
+            Match m = r.Match(filter);
+            if (!m.Success)
             {
-                ModelState.AddModelError("", "Invalid Surname entered");
+                ModelState.AddModelError("", "Unexpected Surname entered");
                 users.UserList = new List<User>();
                 return View(users);
             }

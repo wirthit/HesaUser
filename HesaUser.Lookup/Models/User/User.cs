@@ -1,18 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace HesaUser.Data
+namespace HesaUser.Lookup.Models
 {
     public class User
     {
-        [Key]
-        public int UserId { get; set; }
-        [Required]
         public string FirstName { get; set; }
-        [Required]
         public string Surname { get; set; }
-        [Required]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
         public DateTime Started { get; set; }
-        public DateTime Left { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}")]
+        public DateTime? Left { get; set; }
     }
 }

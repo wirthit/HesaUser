@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace HesaUser.Lookup.Models.Users
+namespace HesaUser.Lookup.Models
 {
     public class Users
     {
+        public List<User> UserList { get; set; }
     }
 }

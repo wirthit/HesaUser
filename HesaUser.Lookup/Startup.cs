@@ -24,6 +24,12 @@ namespace HesaUser.Lookup
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var ddd = Configuration.GetSection("HesaUserAPI");
+
+            services.Configure<HesaUserAPISettings>(Configuration.GetSection("HesaUserAPI"));
+
+            services.AddRazorPages();
+
             services.AddControllers();
         }
 

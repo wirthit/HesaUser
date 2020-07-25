@@ -4,7 +4,7 @@ namespace HesaUser.Lookup.Models
 {
     public class Users
     {
-        public string filter = string.Empty;
+        public string filter { get; set; }
         public List<User> UserList { get; set; }
     }
 }

@@ -1,41 +1,48 @@
 ﻿@model HesaUser.Lookup.Models.Users
-
-<table>
-    <thead>
-        <tr>
-            <th style="width:100px;">Name</th>
-            <th style="width:100px;">Surname</th>
-            <th style="width:100px;">Started</th>
-            <th style="width:100px;">Left</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var user in Model.UserList)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(x => user.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(x => user.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(x => user.Started)
-            </td>
-            <td>
-                @{ 
-                    var left = user.Left == DateTime.MinValue ? string.Empty : user.Left.Value.ToString("dd MMM yy");
-                }
-                @left
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-
-@using (Html.BeginForm("Users", "Users", FormMethod.Post))
+<h3>User details</h3>
+<p>
+    @using (Html.BeginForm("Users", "Users", FormMethod.Post))
+    {
+        <text>Search by Surname:&nbsp;</text>@Html.TextBoxFor(x => Model.filter);
+        <button type="submit">Search</button>
+    }
+</p>
+@if (Model.UserList.Count == 0)
 {
-    @Html.TextBoxFor(x => Model.filter);
-    <button type="submit">Search</button>
+    <p>Enter a surname and press the Search button to see any matching details.</p>
 }
-
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th style="width:100px;">Name</th>
+                <th style="width:100px;">Surname</th>
+                <th style="width:100px;">Started</th>
+                <th style="width:100px;">Left</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.UserList)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(x => user.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(x => user.Surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(x => user.Started)
+                    </td>
+                    <td>
+                        @{
+                            var left = user.Left == DateTime.MinValue ? string.Empty : user.Left.Value.ToString("dd MMM yyyy");
+                        }
+                        @left
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

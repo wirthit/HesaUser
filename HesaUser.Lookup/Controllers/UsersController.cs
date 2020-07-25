@@ -27,12 +27,12 @@ namespace HesaUser.Lookup.Controllers
         {
             Users users = new Users();
 
-            //if (string.IsNullOrEmpty(filter))
-            //{
-            //    users.UserList = new List<User>();
+            if (string.IsNullOrEmpty(filter))
+            {
+                users.UserList = new List<User>();
 
-            //    return View(users);
-            //}
+                return View(users);
+            }
 
             string URI = _HesaUserAPISettings.URI + "/Users/" + filter;
 

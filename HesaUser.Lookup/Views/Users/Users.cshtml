@@ -3,7 +3,8 @@
 <p>
     @using (Html.BeginForm("Users", "Users", FormMethod.Post))
     {
-        <text>Search by Surname:&nbsp;</text>@Html.TextBoxFor(x => Model.filter);
+        @Html.ValidationSummary(false)
+        <text>Search by Surname:&nbsp;</text><input maxlength="15" type="text" value="" name="filter" />
         <button type="submit">Search</button>
     }
 </p>

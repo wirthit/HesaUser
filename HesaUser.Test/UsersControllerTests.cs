@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.Options;
 
 namespace HesaUser.Test
 {
-    public class Tests
+    public class UsersControllerTests
     {
         private UsersController controller;
 

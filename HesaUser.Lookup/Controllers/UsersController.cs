@@ -30,7 +30,13 @@ namespace HesaUser.Lookup.Controllers
             if (string.IsNullOrEmpty(filter))
             {
                 users.UserList = new List<User>();
+                return View(users);
+            }
 
+            if (filter=="robinson")
+            {
+                ModelState.AddModelError("", "Invalid Surname entered");
+                users.UserList = new List<User>();
                 return View(users);
             }
 

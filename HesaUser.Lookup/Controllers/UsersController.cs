@@ -50,12 +50,11 @@ namespace HesaUser.Lookup.Controllers
 
                 response.EnsureSuccessStatusCode();
 
-                using(HttpContent content = response.Content)
-                {
-                    string json = await response.Content.ReadAsStringAsync();
+                HttpContent content = response.Content;
 
-                    users.UserList = JsonConvert.DeserializeObject<List<User>>(json);
-                }
+                string json = await response.Content.ReadAsStringAsync();
+
+                users.UserList = JsonConvert.DeserializeObject<List<User>>(json);
             }
 
             if (users.UserList.Count == 0)

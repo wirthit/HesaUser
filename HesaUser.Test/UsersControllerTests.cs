@@ -11,7 +11,7 @@ namespace HesaUser.Test
     public class UsersControllerTests
     {
         private DbContextOptions<UserDbContext> options;
-        private bool latch = false;
+        private bool latch = false; // run setup once latch otherwise db is seeded in every test.
 
         [SetUp]
         public void Setup()

@@ -1,16 +1,16 @@
 ﻿@model HesaUser.Lookup.Models.Users
-<h3>User details</h3>
+<h3>User details lookup</h3>
 <p>
     @using (Html.BeginForm("Users", "Users", FormMethod.Post))
     {
         @Html.ValidationSummary(false)
-        <text>Search by Surname:&nbsp;</text><input maxlength="15" type="text" value="" name="filter" />
+        <text>Search:&nbsp;</text><input maxlength="15" type="text" value="" name="filter" />
         <button type="submit">Search</button>
     }
 </p>
 @if (Model.UserList.Count == 0)
 {
-    <p>Enter a surname and press the Search button to see any matching details.</p>
+    <p>Enter an entire Surname or part of a Surname and press the Search button to see any matching details.</p>
 }
 else
 {

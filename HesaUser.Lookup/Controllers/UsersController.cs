@@ -26,15 +26,16 @@ namespace HesaUser.Lookup.Controllers
 
             if (string.IsNullOrEmpty(filter))
             {
+                ModelState.AddModelError("", "A Surname to search for must be entered.");
                 users.UserList = new List<User>();
                 return View(users);
             }
 
-            Regex r = new Regex("^[a-z ,.'-]+$", RegexOptions.IgnoreCase);
+            Regex r = new Regex("^[a-z ,.'-]+$", RegexOptions.IgnoreCase); // a valid surname regex
             Match m = r.Match(filter);
             if (!m.Success)
             {
-                ModelState.AddModelError("", "Unexpected Surname entered");
+                ModelState.AddModelError("", "An invalid Surname was entered, please only use alphabetic, space, dash, comma, period or apostrophe characters.");
                 users.UserList = new List<User>();
                 return View(users);
             }
@@ -54,6 +55,11 @@ namespace HesaUser.Lookup.Controllers
                         users.UserList = JsonConvert.DeserializeObject <List<User>> (json);
                     }
                 }
+            }
+
+            if (users.UserList.Count == 0)
+            {
+                ModelState.AddModelError("", $"No search results for '{filter}'.");
             }
 
             return View(users);

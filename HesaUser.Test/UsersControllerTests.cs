@@ -11,23 +11,17 @@ namespace HesaUser.Test
     public class UsersControllerTests
     {
         private DbContextOptions<UserDbContext> options;
-        private bool latch = false; // run setup once latch otherwise db is seeded in every test.
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
-            if (!latch)
-            {
-                DbContextOptionsBuilder<UserDbContext> optionsBuilder = new DbContextOptionsBuilder<UserDbContext>(); // https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext
+            DbContextOptionsBuilder<UserDbContext> optionsBuilder = new DbContextOptionsBuilder<UserDbContext>(); // https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext
 
-                optionsBuilder.UseInMemoryDatabase("sardb");
+            optionsBuilder.UseInMemoryDatabase("sardb");
 
-                options = optionsBuilder.Options;
+            options = optionsBuilder.Options;
 
-                SeedInMem();
-
-                latch = true;
-            }
+            SeedInMem();
         }
 
         [Test]

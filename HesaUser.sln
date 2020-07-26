@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser.Test", "HesaUser.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser.Lookup", "HesaUser.Lookup\HesaUser.Lookup.csproj", "{A39F779C-23FA-4DC7-AA46-DE8A1720772D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HesaUser.Lookup.Tests", "HesaUser.Lookup.Tests\HesaUser.Lookup.Tests.csproj", "{ADD9B90C-1B7B-4B14-8779-EE1C70DC9F5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser.Lookup.Tests", "HesaUser.Lookup.Tests\HesaUser.Lookup.Tests.csproj", "{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A39F779C-23FA-4DC7-AA46-DE8A1720772D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A39F779C-23FA-4DC7-AA46-DE8A1720772D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A39F779C-23FA-4DC7-AA46-DE8A1720772D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ADD9B90C-1B7B-4B14-8779-EE1C70DC9F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ADD9B90C-1B7B-4B14-8779-EE1C70DC9F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ADD9B90C-1B7B-4B14-8779-EE1C70DC9F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ADD9B90C-1B7B-4B14-8779-EE1C70DC9F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

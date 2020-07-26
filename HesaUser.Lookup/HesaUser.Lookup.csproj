@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>HesaUser.Lookup</AssemblyName>
+    <StartupObject>HesaUser.Lookup.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

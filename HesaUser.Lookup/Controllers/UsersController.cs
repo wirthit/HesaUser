@@ -6,6 +6,8 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace HesaUser.Lookup.Controllers
 {
@@ -20,7 +22,7 @@ namespace HesaUser.Lookup.Controllers
 
         [Route("/Users")]
         [HttpGet("{filter}")]
-        public IActionResult Users(string filter)
+        public async Task<IActionResult> Users(string filter)
         {
             Users users = new Users();
 
@@ -42,18 +44,17 @@ namespace HesaUser.Lookup.Controllers
 
             string URI = _HesaUserAPISettings.URI + "/Users/" + filter;
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI);
-
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using(var httpClient = new HttpClient())
             {
-                using (Stream stream = response.GetResponseStream())
-                {
-                    using (StreamReader reader = new StreamReader(stream))
-                    {
-                        string json = reader.ReadToEnd();
+                var response = await httpClient.GetAsync(URI);
 
-                        users.UserList = JsonConvert.DeserializeObject <List<User>> (json);
-                    }
+                response.EnsureSuccessStatusCode();
+
+                using(HttpContent content = response.Content)
+                {
+                    string json = await response.Content.ReadAsStringAsync();
+
+                    users.UserList = JsonConvert.DeserializeObject<List<User>>(json);
                 }
             }
 

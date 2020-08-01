@@ -41,10 +41,12 @@ After pressing the Search button the following results should be seen.
 ![Result detail for searching on 'son'](images/SearchResultsForSon.png)
 The search results show example user detail, first name, start date and leaving date. Only one sample entry has a leaving date for the user with the surname 'Jones'. If we search for Jones we see the detail column with the heading 'Left' populated with a date which is otherwise blank.
 <br><br>
-![Seach result detail for 'Jones' showing a leaving date](images/SearchResultsForJones.png]
+![Search result detail for 'Jones' also showing a leaving date](images/SearchResultsForJones.png)
 A filter is applied to only allow valid surnames to be searched for. The search filter does not allow numeric characters so if we try searching using 'son4' a search error response is shown.
 <br><br>
 ![Search error response when 'son4' is searched for](images/SearchResultsAfterEnteringAnInvalidSurname.png)
 If we search for a surname that doesn't exist in the database e.g. 'Idle' we see a no search results message.
 <br><br>
 ![Search results when no matching surname is found](images/SearchResultsWhenDetailIsNotFoundForTheSurnameIdle.png)
+<br><br>
+End of document.

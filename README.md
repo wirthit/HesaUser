@@ -6,17 +6,17 @@ This is a VisualStudio 2019 Solution with four projects:
 4. The skeleton of tests for the UI based on SpecFlow but not fully implemented as it would require Selenium Web Drivers to be installed to complete and this is beyond the scope of the test.
 
 ## Web API
-Entity Framework is layered on Sqlite to query and persist a List of User objects where each User object will notionally hold Firstname, Surname, Start date and leave date as example details.
-An in memory database is used to exercise tests that count results for known surnames. 
+Entity Framework is layered on Sqlite to query and persist a List of User objects where each User object will notionally hold Firstname, Surname, Start date and leave date as, these will be our example details.  
+An in memory database is used to exercise tests that count results for known surnames.  
 One GET endpoint is provided api/Users/Filter, the request receives a Surname filter string i.e. find Surnames containing the given filter text. The response is a Json array of the above user details.
 
 ## Front End
-This is an MVC .Net Core site with a single screen allowing a surname in fact part of a surname to be entered to search for associated user detail. 
-The text input is validated within the Controller GET method to only accept valid surname characters; this is generally useful but also aimed at preventing any malicious script being entered.
+This is an MVC .Net Core site with a single screen allowing a surname in fact part of a surname to be entered to search for associated user detail.  
+The text input is validated within the Controller GET method to only accept valid surname characters; this is generally useful but also aimed at preventing any malicious script being entered.  
 A SpecFlow test framework exists based on the feature like description in the test question but is currently not implemented but the potential exists to integrate Selenium tests to drive a browser and check UI results.
 
 ## Installation
-It is expected to run this Solution under Visual Studio 2019 and you **will need** to configure multiple startup projects to run the Solution as the multiple startup settings used to run this project are not saved in the solution by Visual Studio.
+It is expected to run this Solution under Visual Studio 2019 and you **will need** to configure multiple startup projects to run the Solution as the multiple startup settings used to run this project are not saved in the solution by Visual Studio.  
 The actual requirement is to run HesaUser first (the Web API) then HesaUser.Lookup (the Search page UI) and this is described next.
 ### Configuring the multiple startup projects
 1. Under Solution Explorer right-click the Solution then select `Set Startup Projects...`

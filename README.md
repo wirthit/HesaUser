@@ -25,3 +25,16 @@ It is expected to run this Solution under Visual Studio 2019 and you will need t
 ![How the Start Menu should look now](images/StartMultipleNowVisibleInVisualStudio2019.png)
 
 ## Usage
+Now starting the solution as usual by either pressing F5 or clicking the green arrow Start button you should be presented with the search page.
+[The opening search page showing a search for text box and search button](images/TheOpeningSearchPage.png)
+The search matches Surnames held in the database that contain the entered search for text. If we enter 'son' we should see results for Robinson and Wilson both of which contain 'son'. Searches are case-sensitive, this is due to the default collation setttings of the underlying database.
+![Enter 'son' in the search text box](images/EnterSonInSearch.png)
+After pressing the Search button the following results sshould be seen.
+![Result detail for searching on 'son'](images/SearchResultsForSon.png)
+The search results show example user detail, first name, start date and leaving date. Only one sample entry has a leaving date for the user with the surname 'Jones'. If we search for Jones we see the detail column with the heading 'Left' populated with a date which is otherwise blank.
+![Seach result detail for 'Jones' showing a leaving date](images/SearchResultsForJones.png]
+A filter is applied to only allow valid surnames to be searched for. The search filter does not allow numeric characters so if we try searching using 'son4' a search error response is shown.
+![Search error response when 'son4' is searched for](images/SearchResultsAfterEnteringAnInvalidSurname.png)
+If we search for a surname that doesn't exist in the database e.g. 'Idle' we see a no search results message.
+![Search results when no matching surname is found](images/SearchResultsWhenDetailIsNotFoundForTheSurnameIdle.png)
+

@@ -21,12 +21,10 @@ The actual requirement is to run HesaUser first (the Web API) then HesaUser.Look
 ### Configuring the multiple startup projects
 1. Under Solution Explorer right-click the Solution then select `Set Startup Projects...`
 <br><br>
-![Select set startup projects](images/SelectSetStartupProjects.png) 
-<br>
+![Select set startup projects](images/SelectSetStartupProjects.png)
 2. The HesaUser project which is the Web API search provider should be the first project to run i.e. at the top of the list. If this is not the case select it then click the Up Arrow button until it is at the top of the list.
 <br><br>
-![Ensure HesaUser is top of the start multiple list](images/EnsureHesaIsFirst.png) 
-<br>
+![Ensure HesaUser is top of the start multiple list](images/EnsureHesaIsFirst.png)
 3. Now your Visual Studio Start menu should look like below:
 <br><br>
 ![How the Start Menu should look now](images/StartMultipleNowVisibleInVisualStudio2019.png)
@@ -34,24 +32,19 @@ The actual requirement is to run HesaUser first (the Web API) then HesaUser.Look
 ## Usage
 Now starting the solution as usual by either pressing F5 or clicking the green arrow Start button you should be presented with the search page.
 <br><br>
-![The opening search page showing a search for text box and search button](images/TheOpeningSearchPage.png) 
-<br>
+![The opening search page showing a search for text box and search button](images/TheOpeningSearchPage.png)
 The search matches Surnames held in the database that contain the entered search for text. If we enter 'son' we should see results for Robinson and Wilson both of which contain 'son'. Searches are case-sensitive, this is due to the default collation setttings of the underlying database.
 <br><br>
-![Enter 'son' in the search text box](images/EnterSonInSearch.png) 
-<br>
+![Enter 'son' in the search text box](images/EnterSonInSearch.png)
 After pressing the Search button the following results should be seen.
 <br><br>
-![Result detail for searching on 'son'](images/SearchResultsForSon.png) 
-<br>
+![Result detail for searching on 'son'](images/SearchResultsForSon.png)
 The search results show example user detail, first name, start date and leaving date. Only one sample entry has a leaving date for the user with the surname 'Jones'. If we search for Jones we see the detail column with the heading 'Left' populated with a date which is otherwise blank.
 <br><br>
-![Seach result detail for 'Jones' showing a leaving date](images/SearchResultsForJones.png] 
-<br>
+![Seach result detail for 'Jones' showing a leaving date](images/SearchResultsForJones.png]
 A filter is applied to only allow valid surnames to be searched for. The search filter does not allow numeric characters so if we try searching using 'son4' a search error response is shown.
 <br><br>
-![Search error response when 'son4' is searched for](images/SearchResultsAfterEnteringAnInvalidSurname.png) 
-<br>
+![Search error response when 'son4' is searched for](images/SearchResultsAfterEnteringAnInvalidSurname.png)
 If we search for a surname that doesn't exist in the database e.g. 'Idle' we see a no search results message.
 <br><br>
-![Search results when no matching surname is found](images/SearchResultsWhenDetailIsNotFoundForTheSurnameIdle.png) 
+![Search results when no matching surname is found](images/SearchResultsWhenDetailIsNotFoundForTheSurnameIdle.png)

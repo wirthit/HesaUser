@@ -6,7 +6,7 @@ There are four projects:
 4. The skeleton of tests for the UI based on SpecFlow but not fully implemented as it would require Selenium Web Drivers to be installed to complete and this is beyond the scope of the test.
 
 ## Web API
-Entity Framework us used to persist a List of User objects under Sqlite where a User object will hold Firstname, Surname, Start date and leave date notionally as example details around the Surname.
+Entity Framework is used to persist a List of User objects under Sqlite where a User object will hold Firstname, Surname, Start date and leave date notionally as example details around the Surname.
 An in memory database is used to exercise tests that count results for known surnames.
 
 ## Front End

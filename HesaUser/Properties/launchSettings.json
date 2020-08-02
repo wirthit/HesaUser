@@ -11,7 +11,8 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchUrl": "api/Users",
+      "launchBrowser": true,
+      "launchUrl": "Users",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using HesaUser.Lookup.Models;
+using HesaUser.Models;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
@@ -9,13 +9,13 @@ using System.Text.RegularExpressions;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace HesaUser.Lookup.Controllers
+namespace HesaUser.Controllers
 {
-    public class UsersController : Controller
+    public class LookupController : Controller
     {
         private readonly HesaUserAPISettings _HesaUserAPISettings;
 
-        public UsersController(IOptions<HesaUserAPISettings> options)
+        public LookupController(IOptions<HesaUserAPISettings> options)
         {
             _HesaUserAPISettings = options.Value;
         }

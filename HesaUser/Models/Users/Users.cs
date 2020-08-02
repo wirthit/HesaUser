@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace HesaUser.Lookup.Models
+namespace HesaUser.Models
 {
     public class Users
     {

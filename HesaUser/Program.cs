@@ -42,7 +42,9 @@ namespace HesaUser
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                        .UseUrls("http://*:57151")
+                        .UseStartup<Startup>();
                 });
     }
 }

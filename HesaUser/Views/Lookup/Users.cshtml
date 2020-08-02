@@ -1,7 +1,7 @@
-﻿@model HesaUser.Lookup.Models.Users
+﻿@model HesaUser.Models.Users
 <h3>User details lookup</h3>
 <p>
-    @using (Html.BeginForm("Users", "Users", FormMethod.Post))
+    @using (Html.BeginForm("Users", "Lookup", FormMethod.Post))
     {
         @Html.ValidationSummary(false)
         <text>Search:&nbsp;</text><input maxlength="15" type="text" value="" name="filter" />

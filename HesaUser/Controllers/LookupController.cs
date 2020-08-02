@@ -42,9 +42,11 @@ namespace HesaUser.Controllers
                 return View(users);
             }
 
-            string URI = _HesaUserAPISettings.URI + "/Users/" + filter;
+            // typically routing would resolve the URI in the same service but this is a separate service currently embedded in the same project.
+            // As a separate service it would need config to determine the API URI.
+            string URI = _HesaUserAPISettings.URI + "/Users/" + filter; 
 
-            using(var httpClient = new HttpClient())
+            using (var httpClient = new HttpClient())
             {
                 var response = await httpClient.GetAsync(URI);
 

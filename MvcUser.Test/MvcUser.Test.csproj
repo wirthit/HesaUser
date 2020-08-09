@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HesaUser\MvcUser.csproj" />
+    <ProjectReference Include="..\MvcUser\MvcUser.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 # Description
-This is a VisualStudio 2019 Solution with three projects:
+This is a VisualStudio 2019 Solution with three projects to demonstrate a simple MVC user lookup page:
 1. A Web API offering a Surname search endpoint on DB persisted data and an MVC front end using the Web API giving a Surname search UI to get and display associated user details.
 2. Some tests against the WEB API
 3. The skeleton of tests for the UI based on SpecFlow but not fully implemented as it would require Selenium Web Drivers to be installed to complete and this is beyond the scope of the test.

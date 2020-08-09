@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HesaUser
+namespace MvcUser
 {
-    public class HesaUserAPISettings
+    public class UserAPISettings
     {
         public string URI { get; set; }
     }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser", "HesaUser\HesaUser.csproj", "{B01A40F2-3ECF-443A-80C6-32E185908D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcUser", "HesaUser\MvcUser.csproj", "{B01A40F2-3ECF-443A-80C6-32E185908D72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser.Test", "HesaUser.Test\HesaUser.Test.csproj", "{8B60B018-CB3E-4D36-97C0-1C018AAD98CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcUser.Test", "HesaUser.Test\MvcUser.Test.csproj", "{8B60B018-CB3E-4D36-97C0-1C018AAD98CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HesaUser.Lookup.Tests", "HesaUser.Lookup.Tests\HesaUser.Lookup.Tests.csproj", "{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcUser.Lookup.Tests", "HesaUser.Lookup.Tests\MvcUser.Lookup.Tests.csproj", "{0BFA6588-D9DA-436F-A9B3-3B7D9E48996F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

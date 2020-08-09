@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HesaUser.Data
+namespace MvcUser.Data
 {
     public static class DbInitialise
     {

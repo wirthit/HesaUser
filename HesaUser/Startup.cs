@@ -10,12 +10,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using static HesaUser.Data.User;
+using static MvcUser.Data.User;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using HesaUser.Data;
+using MvcUser.Data;
 
-namespace HesaUser
+namespace MvcUser
 {
     public class Startup
     {
@@ -31,7 +31,7 @@ namespace HesaUser
         {
             services.AddDbContext<UserDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("SqliteConnection")));
 
-            services.Configure<HesaUserAPISettings>(Configuration.GetSection("HesaUserAPI"));
+            services.Configure<UserAPISettings>(Configuration.GetSection("MvcUserAPI"));
 
             services.AddRazorPages();
 

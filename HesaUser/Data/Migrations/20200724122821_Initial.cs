@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HesaUser.Data.Migrations
+namespace MvcUser.Data.Migrations
 {
     public partial class Initial : Migration
     {

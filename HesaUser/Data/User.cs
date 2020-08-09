@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace HesaUser.Data
+namespace MvcUser.Data
 {
     public class User
     {

@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using HesaUser.Data;
+using MvcUser.Data;
 using System.Security.Cryptography.X509Certificates;
 
-namespace HesaUser.Controllers
+namespace MvcUser.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

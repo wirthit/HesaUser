@@ -1,12 +1,12 @@
 using NUnit.Framework;
-using HesaUser.Controllers;
-using HesaUser.Data;
+using MvcUser.Controllers;
+using MvcUser.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System;
 
-namespace HesaUser.Test
+namespace MvcUser.Test
 {
     public class UsersControllerTests
     {

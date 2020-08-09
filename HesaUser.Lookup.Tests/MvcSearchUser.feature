@@ -1,4 +1,4 @@
-﻿Feature: HesaSearchUsers
+﻿Feature: MvcSearchUsers
 	Ability to lookup users from the admin page as a valid user
 
 @mytag

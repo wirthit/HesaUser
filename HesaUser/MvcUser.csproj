@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>HesaUser.Program</StartupObject>
+    <StartupObject>MvcUser.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

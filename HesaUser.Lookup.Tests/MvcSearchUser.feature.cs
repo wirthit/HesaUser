@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace HesaUser.Lookup.Tests
+namespace MvcUser.Lookup.Tests
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,22 +19,22 @@ namespace HesaUser.Lookup.Tests
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.3.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("HesaSearchUsers", Description="\tAbility to lookup users from the admin page as a valid user", SourceFile="HesaSearchUser.feature", SourceLine=0)]
-    public partial class HesaSearchUsersFeature
+    [TechTalk.SpecRun.FeatureAttribute("MvcSearchUsers", Description="\tAbility to lookup users from the admin page as a valid user", SourceFile="MvcSearchUser.feature", SourceLine=0)]
+    public partial class MvcSearchUsersFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "HesaSearchUser.feature"
+#line 1 "MvcSearchUser.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "HesaSearchUsers", "\tAbility to lookup users from the admin page as a valid user", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MvcSearchUsers", "\tAbility to lookup users from the admin page as a valid user", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

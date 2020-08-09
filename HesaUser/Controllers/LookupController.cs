@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using HesaUser.Models;
+using MvcUser.Models;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
@@ -9,15 +9,15 @@ using System.Text.RegularExpressions;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace HesaUser.Controllers
+namespace MvcUser.Controllers
 {
     public class LookupController : Controller
     {
-        private readonly HesaUserAPISettings _HesaUserAPISettings;
+        private readonly UserAPISettings _MvcUserAPISettings;
 
-        public LookupController(IOptions<HesaUserAPISettings> options)
+        public LookupController(IOptions<UserAPISettings> options)
         {
-            _HesaUserAPISettings = options.Value;
+            _MvcUserAPISettings = options.Value;
         }
 
         [Route("/Users")]
@@ -44,7 +44,7 @@ namespace HesaUser.Controllers
 
             // typically routing would resolve the URI in the same service but this is a separate service currently embedded in the same project.
             // As a separate service it would need config to determine the API URI.
-            string URI = _HesaUserAPISettings.URI + "/Users/" + filter; 
+            string URI = _MvcUserAPISettings.URI + "/Users/" + filter; 
 
             using (var httpClient = new HttpClient())
             {

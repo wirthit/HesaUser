@@ -11,10 +11,10 @@ using OpenQA.Selenium.Edge;
  * Using MS Edge driver downloaded from https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
  */
 
-namespace HesaUser.Lookup.Tests
+namespace MvcUser.Lookup.Tests
 {
     [Binding]
-    public class HesaSearchUsersSteps
+    public class MvcSearchUsersSteps
     {
         IWebDriver browserDriver;
 

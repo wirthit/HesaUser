@@ -1,7 +1,7 @@
-﻿using HesaUser.Data;
+﻿using MvcUser.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HesaUser.Data
+namespace MvcUser.Data
 {
     public class UserDbContext : DbContext
     {

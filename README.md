@@ -12,5 +12,5 @@ One GET endpoint is provided api/Users/Filter which for a request receives a Sur
 ## Front End
 This is an MVC .Net Core site with a single screen allowing part of a surname to be entered to search for associated user detail.<br><br>
 The text input is validated within the Controller GET method to only accept valid surname characters; this is generally useful but also aimed at preventing any malicious script being entered.<br><br>
-A SpecFlow test framework exists based on the feature like description in the test question but is currently not implemented but the potential exists to integrate Selenium tests to drive a browser and check UI results.
+A SpecFlow test framework exists that is not currently not implemented but the potential exists to integrate Selenium tests to drive a browser and check UI results.
 
